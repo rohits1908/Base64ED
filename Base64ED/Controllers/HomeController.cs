@@ -10,9 +10,15 @@ namespace Base64ED.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEncoderDecoder _converter;
+        public HomeController(IEncoderDecoder converter){
+            _converter = converter;
+
+        }
         public IActionResult Index()
         {
-            return View();
+            Base64Converter obj=new Base64Converter();   
+            return View(obj);
         }
 
         public IActionResult Privacy()

@@ -9,17 +9,18 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Base64ED.Models;
 
 namespace Base64ED
 {
     public class Startup
     {
+        /*private IEncoderDecoder _config;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-        }
+            configuration = _config;
+        } */
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -33,6 +34,7 @@ namespace Base64ED
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<IEncoderDecoder, Base64EncodingDecoding>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +54,7 @@ namespace Base64ED
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseStaticFiles();
 
             app.UseMvc(routes =>
             {

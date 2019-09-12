@@ -1,15 +1,15 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/*/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
+/*.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/*html {
   font-size: 14px;
 }
 @media (min-width: 768px) {
@@ -29,28 +29,96 @@ html {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-button.accept-policy {
+.accept-policy {
   font-size: 1rem;
   line-height: inherit;
-}
+}*/
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
+/*html {
   position: relative;
   min-height: 100%;
-}
+}*/
 
-body {
+/*body { */
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
+  /*margin-bottom: 60px;
+}*/
+
+/*.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  white-space: nowrap;
+  white-space: nowrap;*/
   /* Set the fixed height of the footer here */
-  height: 60px;
+  /*height: 60px;
   line-height: 60px; /* Vertically center the text there */
+.topnav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    background-color: #3399FF;
+    overflow: hidden;
+    display:block;
+}
+.topnav a {
+        float: left;
+        color:white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        text-align:center;
+}
+.topnav-right {
+    float:right;
+}
+.main {
+    padding-left:20px;
+    width:1200px;
+    margin:0 auto;
+    margin-top:20px;
+}
+.inputpanel {
+    height:480px;
+    width:500px;
+    background-color:ghostwhite;
+    border-style:solid;
+    border-color:#3399FF;
+    border-width:thin;
+    float:left;
+}
+.innerpane {
+    height: 40px;
+    width: 500px;
+    background-color: ghostwhite;
+    border-style:solid;
+    border-width:thin;
+    border-color: #3399FF;
+    background-color:#3399FF;
+}
+.outputpanel {
+    height: 480px;
+    width: 500px;
+    background-color: ghostwhite;
+    border-style: solid;
+    border-color: #3399FF;
+    border-width: thin;
+    margin-left:600px;
+}
+
+.outerpane {
+    height: 40px;
+    width: 500px;
+    background-color: ghostwhite;
+    border-style: solid;
+    border-width: thin;
+    border-color: #3399FF;
+    background-color:#3399FF;
+}
+.button {
+    margin-top:25px;
+    margin-left:95px;
+}
+.text{
+    float:left;
 }

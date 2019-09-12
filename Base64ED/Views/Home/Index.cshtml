@@ -1,8 +1,32 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="topnav">
+    <span>
+    @*<img src="~/images/BElogo.jpg" runat:"server" style="width:76px;height:76px; padding-left:10px" />*@
+    </span>
+    <span class="text">
+        <a href="#Home"><b>BASE64ED</b></a>
+    </span>
+    <div class="topnav-right">
+        @*<a href="#wiki">HELP</a>*@
+        <a href="https://en.wikipedia.org/wiki/Base64" target="_blank"><img src="~/images/help.jpg" style="width:76px;height:76px;"/></a>
+    </div>
 </div>
+    <div class="button">
+<input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE"/>
+<button type="button" class="btn btn-primary">Decode</button>
+    </div>
+    <div class="main">
+        <div class="inputpanel">
+            <div class="innerpane"><h4 style="color:white;">INPUT</h4></div>
+            <textarea rows="18" cols="68"></textarea>
+        </div>
+        <div class="outputpanel">
+            <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
+            <textarea rows="18" cols="68"></textarea>
+        </div>
+    </div>
+    <br>
+    <h2>WHAT IS BASE64?</h2>
+<textarea rows="20" cols="189"></textarea>
