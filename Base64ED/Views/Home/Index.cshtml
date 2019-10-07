@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Base64Converter
+@{
     ViewData["Title"] = "Home Page";
 }
 <div class="topnav">
@@ -14,19 +15,23 @@
     </div>
 </div>
     <div class="button">
-<input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE"/>
-<button type="button" class="btn btn-primary">Decode</button>
+        <input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE"/>
     </div>
     <div class="main">
-        <div class="inputpanel">
-            <div class="innerpane"><h4 style="color:white;">INPUT</h4></div>
-            <textarea rows="18" cols="68"></textarea>
-        </div>
+
+        <form method="post" runat="server" id="contactForm1" onsubmit="return getInputValue();">
+            <div class="inputpanel">
+                <div class="innerpane"><h4 style="color:white;">INPUT</h4></div>
+                <textarea rows="18" cols="68" id="inputString"></textarea>
+                    <button type="submit" class="btn btn-primary" onclick="getInputValue();" runat="server">Decode</button>
+                </div>
+        
         <div class="outputpanel">
             <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
-            <textarea rows="18" cols="68"></textarea>
+            <textarea rows="18" cols="68" id="textoutput"></textarea>
         </div>
+        </form>
     </div>
-    <br>
+    @*<br>
     <h2>WHAT IS BASE64?</h2>
-<textarea rows="20" cols="189"></textarea>
+<textarea rows="20" cols="189"></textarea>*@

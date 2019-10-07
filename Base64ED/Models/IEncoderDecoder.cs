@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 namespace Base64ED.Models{
     public interface IEncoderDecoder
     {
-        string Encoder(string Input);
+        Base64Converter Encoder(string Input);
 
-        string Decoder(string Input);
+        Base64Converter Decoder(string Input);
 
     }
 }
