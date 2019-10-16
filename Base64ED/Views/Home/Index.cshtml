@@ -2,29 +2,29 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
 <div class="topnav">
     <span>
-    @*<img src="~/images/BElogo.jpg" runat:"server" style="width:76px;height:76px; padding-left:10px" />*@
     </span>
     <span class="text">
         <a href="#Home"><b>BASE64ED</b></a>
     </span>
     <div class="topnav-right">
-        @*<a href="#wiki">HELP</a>*@
         <a href="https://en.wikipedia.org/wiki/Base64" target="_blank"><img src="~/images/help.jpg" style="width:76px;height:76px;"/></a>
     </div>
 </div>
     <div class="button">
-        <input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE"/>
+        <input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE" id="togBtn"/>
     </div>
     <div class="main">
 
-        <form method="post" runat="server" id="contactForm1" onsubmit="return getInputValue();">
+        <form method="post" runat="server" id="contactForm1">
             <div class="inputpanel">
                 <div class="innerpane"><h4 style="color:white;">INPUT</h4></div>
                 <textarea rows="18" cols="68" id="inputString"></textarea>
-                    <button type="submit" class="btn btn-primary" onclick="getInputValue();" runat="server">Decode</button>
-                </div>
+                @*<button type="submit" class="btn btn-primary" onclick="getInputValueOfEncoder(); return false" runat="server">Encode</button>
+                <button type="submit" class="btn btn-primary" onclick="getInputValueOfDecoder(); return false" runat="server">Decode</button>*@
+            </div>
         
         <div class="outputpanel">
             <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
@@ -32,6 +32,3 @@
         </div>
         </form>
     </div>
-    @*<br>
-    <h2>WHAT IS BASE64?</h2>
-<textarea rows="20" cols="189"></textarea>*@

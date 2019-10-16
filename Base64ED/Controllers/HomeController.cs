@@ -27,9 +27,14 @@ namespace Base64ED.Controllers
         public string Encoder(string input)
         {
             Base64Converter model = _converter.Encoder(input);
-            return model.Output;
+            return model.Output.ToString();
         }
 
+        public string Decoder(string input)
+        {
+            Base64Converter model = _converter.Decoder(input);
+            return model.Output.ToString();
+        }
         public IActionResult Privacy()
         {
             return View();
