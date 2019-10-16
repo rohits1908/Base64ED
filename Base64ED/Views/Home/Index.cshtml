@@ -21,12 +21,14 @@
         <form method="post" runat="server" id="contactForm1">
             <div class="inputpanel">
                 <div class="innerpane"><h4 style="color:white;">INPUT</h4></div>
-                <textarea rows="18" cols="68" id="inputString"></textarea>
+                <textarea rows="18" cols="68" id="inputString" placeholder="Type(or Paste) here....."></textarea>
+                @*<button type="submit" class="btn btn-primary" onclick="getInputValueOfEncoder(); return false" runat="server">Encode</button>
+                <button type="submit" class="btn btn-primary" onclick="getInputValueOfDecoder(); return false" runat="server">Decode</button>*@
             </div>
         
         <div class="outputpanel">
             <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
-            <textarea rows="18" cols="68" id="textoutput"></textarea>
+            <textarea rows="18" cols="68" id="textoutput" placeholder="Result goes here....."></textarea>
         </div>
         </form>
     </div>

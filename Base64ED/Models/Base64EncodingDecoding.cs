@@ -9,7 +9,7 @@ namespace Base64ED.Models
     public class Base64EncodingDecoding : IEncoderDecoder
     {
         private string str;
-        public void setData(string s)
+        public void SetData(string s)
         {
             str = s;
         }
