@@ -10,26 +10,25 @@ namespace Base64ED.Controllers
 {
     public class HomeController : Controller
     {
+        //constructor overriding(dependency injection)
         private readonly IEncoderDecoder _converter;
 
         public HomeController(IEncoderDecoder converter){
             _converter = converter;
 
         }
-        
+        //Action methods
         public ActionResult Index()
         {
-
-            //Base64Converter model = _converter.Encoder("hello");
             return View();
         } 
-
+        [HttpGet]
         public string Encoder(string input)
         {
             Base64Converter model = _converter.Encoder(input);
             return model.Output.ToString();
         }
-
+        [HttpGet]
         public string Decoder(string input)
         {
             Base64Converter model = _converter.Decoder(input);

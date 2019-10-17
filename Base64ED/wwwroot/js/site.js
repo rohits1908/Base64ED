@@ -1,42 +1,40 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿//ajax function to hit api and get data
 
-// Write your JavaScript code.
-//ajax function to hit api and get data
+//$("#togBtn").change(function () {
+    
+//    liveMode(toggleSwitchStatus);
+//});
+//function liveMode(toggleSwitchStatus) {
+    
+//}
 
-$("#togBtn").change(function () {
-    var toggleSwitchStatus = $(this).is(':checked');
-    liveMode(toggleSwitchStatus);
+$("#inputString").keyup(function () {
+    var toggleSwitchStatus = document.getElementById("togBtn").checked;
+    var inputCaptured = document.getElementById("inputString").value;
+    if (toggleSwitchStatus) {
+        
+        $.ajax('https://localhost:44361/home/encoder',   // request url
+            {
+                data: { input: inputCaptured },
+                type: 'get',
+                async: false,
+                success: function (data) {// success callback function
+                    $("#textoutput").html(data);
+                }
+            });
+    }
+    else {
+        $.ajax('https://localhost:44361/home/decoder',
+            {
+                data: { input: inputCaptured },
+                type: 'get',
+                async: false,
+                success: function (data) {
+                    $("#textoutput").html(data);
+                }
+            });
+    }
 });
-function liveMode(toggleSwitchStatus) {
-    $("#inputString").keyup(function () {
-        if (toggleSwitchStatus) {
-            var inputCaptured = document.getElementById("inputString").value;
-            $.ajax('https://localhost:44361/home/encoder',   // request url
-                {
-                    data: { input: inputCaptured },
-                    type: 'get',
-                    async: false,
-                    success: function (data) {// success callback function
-                        $("#textoutput").html(data);
-                    }
-                });
-        }
-        else {
-            var inputCaptured = document.getElementById("inputString").value;
-            $.ajax('https://localhost:44361/home/decoder',
-                {
-                    data: { input: inputCaptured },
-                    type: 'get',
-                    async: false,
-                    success: function (data) {
-                        $("#textoutput").html(data);
-                    }
-                });
-        }
-    });
-}
-
 
 
 

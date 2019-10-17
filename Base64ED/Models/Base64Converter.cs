@@ -7,8 +7,6 @@ namespace Base64ED.Models
 {
     public class Base64Converter
     {
-        public string Input { get; set; }
-
         public string Output { get; set; }
     }
 }

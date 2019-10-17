@@ -118,6 +118,7 @@ for details on configuring this project to bundle and minify static web assets. 
 .button {
     margin-top:25px;
     margin-left:95px;
+    position:relative;
 }
 .text{
     float:left;
