@@ -7,9 +7,19 @@
 //function liveMode(toggleSwitchStatus) {
     
 //}
-
-$("#inputString").keyup(function () {
+function delay(callback, ms) {
+    var timer = 0;
+    return function () {
+        var context = this, args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            callback.apply(context, args);
+        }, ms || 0);
+    };
+}
+$("#inputString").keyup(delay(function (e) {
     var toggleSwitchStatus = document.getElementById("togBtn").checked;
+   
     var inputCaptured = document.getElementById("inputString").value;
     if (toggleSwitchStatus) {
         
@@ -34,7 +44,7 @@ $("#inputString").keyup(function () {
                 }
             });
     }
-});
+},1000));
 
 
 
