@@ -25,14 +25,14 @@ namespace Base64ED.Controllers
         [HttpGet]
         public string Encoder(string input)
         {
-            Base64Converter model = _converter.Encoder(input);
-            return model.Output.ToString();
+            string Output = _converter.Encoder(input);
+            return Output;
         }
         [HttpGet]
         public string Decoder(string input)
         {
-            Base64Converter model = _converter.Decoder(input);
-            return model.Output.ToString();
+            string Output = _converter.Decoder(input);
+            return Output;
         }
         public IActionResult Privacy()
         {

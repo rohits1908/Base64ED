@@ -8,23 +8,18 @@ namespace Base64ED.Models
 {
     public class Base64EncodingDecoding : IEncoderDecoder
     {
-        public Base64Converter Encoder(string Input)
+        public string Encoder(string Input)
     {
             byte[] toEncodeAsBytes = System.Text.ASCIIEncoding.ASCII.GetBytes(Input);
-           
-            return new Base64Converter
-            {
-                Output = System.Convert.ToBase64String(toEncodeAsBytes)
-            };
+            string Output = System.Convert.ToBase64String(toEncodeAsBytes);
+            return Output;
         }
 
-        public Base64Converter Decoder(string Input)
+        public string Decoder(string Input)
         {
             byte[] encodedDataAsBytes = System.Convert.FromBase64String(Input);
-            return new Base64Converter
-            {
-                Output = System.Text.ASCIIEncoding.ASCII.GetString(encodedDataAsBytes)
-            };
+            string Output = System.Text.ASCIIEncoding.ASCII.GetString(encodedDataAsBytes);
+            return Output;
         }
 
     }

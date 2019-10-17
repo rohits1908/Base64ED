@@ -1,18 +1,15 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="topnav">
-    <span>
-    </span>
-    <span class="text">
+    <div class="topnav">
+        <span class="text">
         <a href="#"><b>BASE64ED</b></a>
-    </span>
-    <div class="topnav-right">
+        </span>
+        <div class="topnav-right">
         <a href="https://en.wikipedia.org/wiki/Base64" target="_blank"><img src="~/images/help.jpg" style="width:76px;height:76px;"/></a>
+        </div>
     </div>
-</div>
     <div class="button">
         <input type="checkbox" checked data-toggle="toggle" data-size="lg" data-on="ENCODE" data-off="DECODE" id="togBtn"/>
     </div>
@@ -24,9 +21,9 @@
                 <textarea rows="18" cols="68" id="inputString" placeholder="Type(or Paste) here....."></textarea>
             </div>
         
-        <div class="outputpanel">
-            <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
-            <textarea rows="18" cols="68" id="textoutput" placeholder="Result goes here....."></textarea>
-        </div>
+            <div class="outputpanel">
+                <div class="outerpane"><h4 style="color:white;">OUTPUT</h4></div>
+                <textarea rows="18" cols="68" id="textoutput" placeholder="Result goes here....."></textarea>
+            </div>
         </form>
     </div>
